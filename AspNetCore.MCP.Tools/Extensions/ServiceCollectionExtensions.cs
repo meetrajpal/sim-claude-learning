@@ -22,6 +22,10 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IDepartmentService, DepartmentService>();
         services.AddScoped<IEmployeeMapper, EmployeeMapper>();
         services.AddScoped<IDepartmentMapper, DepartmentMapper>();
+        services.AddScoped<ILeaveRequestMapper, LeaveRequestMapper>();
+        services.AddScoped<ILeaveRequestService, LeaveRequestService>();
+        services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
+
         services.AddValidatorsFromAssembly(typeof(EmployeeCreateRequestDTOValidator).Assembly);
         return services;
     }

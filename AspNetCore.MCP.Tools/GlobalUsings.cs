@@ -11,6 +11,7 @@ global using AspNetCore.MCP.DAL.UnitOfWork;
 global using AspNetCore.MCP.Domain.DTOs;
 global using AspNetCore.MCP.Domain.DTOs.Department;
 global using AspNetCore.MCP.Domain.DTOs.Employee;
+global using AspNetCore.MCP.Domain.DTOs.LeaveRequest;
 global using AspNetCore.MCP.Domain.Interfaces;
 global using AspNetCore.MCP.Domain.Interfaces.Repositories;
 global using AspNetCore.MCP.Domain.Interfaces.Services;
