@@ -30,8 +30,6 @@ public class LeaveRequestService(IUnitOfWork unitOfWork, ILeaveRequestMapper lea
             return ApiResponse<LeaveRequest>.Failure("Employee not found.");
 
         var leaveRequest = leaveRequestMapper.LeaveRequestCreateRequestDTOToLeaveRequest(dto);
-        // LeaveRequest does not have a reference to EmployeeId? It does: EmployeeId property.
-        // The mapper should map EmployeeId.
 
         var created = await _leaveRequestRepository.AddAsync(leaveRequest);
         await unitOfWork.SaveChangesAsync();
@@ -48,8 +46,6 @@ public class LeaveRequestService(IUnitOfWork unitOfWork, ILeaveRequestMapper lea
         if (leaveRequest is null)
             return ApiResponse<string>.Failure("Leave request not found.", [$"No leave request found with id: {id}"]);
 
-        // Validate EmployeeId if provided? The DTO includes EmployeeId, but we might not allow changing employee?
-        // For simplicity, we'll allow updating EmployeeId but check if the new employee exists.
         var employeeId = dto.EmployeeId;
         var employeeExists = await _employeeRepository.ExistsAsync(employeeId);
         if (!employeeExists)

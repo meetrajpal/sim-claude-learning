@@ -2,7 +2,7 @@ using AspNetCore.MCP.Domain.DTOs.LeaveRequest;
 using AspNetCore.MCP.Domain.Interfaces.Services;
 using FluentValidation;
 
-namespace AspNetCore.MCP.API.Tools;
+namespace AspNetCore.MCP.Tools.Tools;
 
 [McpServerToolType]
 public class LeaveRequestTool(
@@ -39,8 +39,11 @@ public class LeaveRequestTool(
         [Description("Type of leave e.g. Vacation, Sick, etc.")] string leaveType,
         [Description("Status of the leave request e.g. Pending, Approved, Rejected")] string status)
     {
+        if (!Guid.TryParse(employeeId, out var parsedEmployeeId))
+            throw new ArgumentException($"Invalid Guid format for given employeeId: {employeeId}");
+
         var dto = new LeaveRequestCreateRequestDTO(
-            EmployeeId: Guid.Parse(employeeId),
+            EmployeeId: parsedEmployeeId,
             StartDate: DateOnly.Parse(startDate),
             EndDate: DateOnly.Parse(endDate),
             LeaveType: leaveType,
@@ -68,8 +71,11 @@ public class LeaveRequestTool(
         if (!Guid.TryParse(id, out var parsedId))
             throw new ArgumentException($"Invalid Guid format for given id: {id}");
 
+        if (!Guid.TryParse(employeeId, out var parsedEmployeeId))
+            throw new ArgumentException($"Invalid Guid format for given employeeId: {employeeId}");
+
         var dto = new LeaveRequestUpdateRequestDTO(
-            EmployeeId: Guid.Parse(employeeId),
+            EmployeeId: parsedEmployeeId,
             StartDate: DateOnly.Parse(startDate),
             EndDate: DateOnly.Parse(endDate),
             LeaveType: leaveType,

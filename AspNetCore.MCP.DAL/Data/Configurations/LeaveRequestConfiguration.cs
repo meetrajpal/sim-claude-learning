@@ -25,9 +25,8 @@ public class LeaveRequestConfiguration : IEntityTypeConfiguration<LeaveRequest>
 
         builder.Property(x => x.UpdatedAt).HasDefaultValueSql("GETUTCDATE()");
 
-        // Relationship: One Employee can have many LeaveRequests
         builder.HasOne(x => x.Employee)
-            .WithMany() // Employee entity doesn't have a collection of LeaveRequests yet; we could add it but not required for now
+            .WithMany()
             .HasForeignKey(x => x.EmployeeId)
             .OnDelete(DeleteBehavior.Restrict);
     }

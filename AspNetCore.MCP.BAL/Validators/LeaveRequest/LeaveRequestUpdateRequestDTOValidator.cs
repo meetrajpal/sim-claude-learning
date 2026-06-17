@@ -18,6 +18,5 @@ public class LeaveRequestUpdateRequestDTOValidator : AbstractValidator<LeaveRequ
                                  .WithMessage("EndDate must be greater than StartDate.");
 
         RuleFor(x => x.EmployeeId).NotEmpty().WithMessage("EmployeeId is required.");
-        // IsActive is a boolean, no validation needed unless we want to restrict to true/false? It's already bool.
     }
 }
