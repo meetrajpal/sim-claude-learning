@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "employee-mcp-server": {
+      "type": "http",
+      "url": "http://localhost:5021/"
+    }
+  }
+}

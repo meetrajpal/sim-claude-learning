@@ -1,0 +1,10 @@
+﻿global using AspNetCore.MCP.DAL.Data;
+global using AspNetCore.MCP.DAL.Repositories;
+global using AspNetCore.MCP.Domain.DTOs;
+global using AspNetCore.MCP.Domain.Entities;
+global using AspNetCore.MCP.Domain.Entities.Interfaces;
+global using AspNetCore.MCP.Domain.Interfaces;
+global using AspNetCore.MCP.Domain.Interfaces.Repositories;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using System.Reflection;

@@ -1,0 +1,10 @@
+﻿global using AspNetCore.MCP.BAL.Mappers.Interfaces;
+global using AspNetCore.MCP.Domain.DTOs;
+global using AspNetCore.MCP.Domain.DTOs.Department;
+global using AspNetCore.MCP.Domain.DTOs.Employee;
+global using AspNetCore.MCP.Domain.Entities;
+global using AspNetCore.MCP.Domain.Interfaces;
+global using AspNetCore.MCP.Domain.Interfaces.Repositories;
+global using AspNetCore.MCP.Domain.Interfaces.Services;
+global using FluentValidation;
+global using Riok.Mapperly.Abstractions;

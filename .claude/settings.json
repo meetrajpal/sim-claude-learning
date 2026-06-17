@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "employee-mcp-server",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/pre-tool-log.js"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "employee-mcp-server",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/post-tool-log.js"
+          }
+        ]
+      }
+    ]
+  }
+}

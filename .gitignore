@@ -1,0 +1,69 @@
+## .NET / ASP.NET Core
+bin/
+obj/
+*.user
+*.suo
+*.vs/
+
+## Visual Studio
+.vs/
+*.rsuser
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!**/packages/repositories.config
+*.nuspec
+
+## User-specific files
+*.rsuser
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+## Mono auto-generated
+mono_crash.*
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## Folder config file
+[Dd]esktop.ini
+
+## Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Node.js (for scripts/)
+node_modules/
+npm-debug.log*
+
+## Local secrets / connection strings
+appsettings.local.json
+appsettings.Development.json
+*secrets.json
+
+## Claude Code local settings (machine-specific)
+.claude/settings.local.json

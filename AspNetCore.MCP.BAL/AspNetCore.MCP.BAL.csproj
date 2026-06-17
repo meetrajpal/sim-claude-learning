@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Validators\LeaveRequest\**" />
+    <EmbeddedResource Remove="Validators\LeaveRequest\**" />
+    <None Remove="Validators\LeaveRequest\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="Riok.Mapperly" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCore.MCP.DAL\AspNetCore.MCP.DAL.csproj" />
+    <ProjectReference Include="..\AspNetCore.MCP.Domain\AspNetCore.MCP.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

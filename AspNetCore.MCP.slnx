@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AspNetCore.MCP.BAL/AspNetCore.MCP.BAL.csproj" />
+  <Project Path="AspNetCore.MCP.DAL/AspNetCore.MCP.DAL.csproj" />
+  <Project Path="AspNetCore.MCP.Domain/AspNetCore.MCP.Domain.csproj" />
+  <Project Path="AspNetCore.MCP.Tools/AspNetCore.MCP.Tools.csproj" />
+</Solution>
