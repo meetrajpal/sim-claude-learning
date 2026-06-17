@@ -1,7 +1,3 @@
-using AspNetCore.MCP.Domain.DTOs.LeaveRequest;
-using AspNetCore.MCP.Domain.Interfaces.Services;
-using FluentValidation;
-
 namespace AspNetCore.MCP.Tools.Tools;
 
 [McpServerToolType]

@@ -1,5 +1,3 @@
-using AspNetCore.MCP.Domain.DTOs.LeaveRequest;
-
 namespace AspNetCore.MCP.Domain.Interfaces.Services;
 
 public interface ILeaveRequestService

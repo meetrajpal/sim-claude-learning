@@ -1,6 +1,3 @@
-using AspNetCore.MCP.Domain.DTOs.LeaveRequest;
-using FluentValidation;
-
 namespace AspNetCore.MCP.BAL.Validators.LeaveRequest;
 
 public class LeaveRequestUpdateRequestDTOValidator : AbstractValidator<LeaveRequestUpdateRequestDTO>
