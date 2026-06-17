@@ -6,10 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="DTOs\LeaveRequest\**" />
-    <EmbeddedResource Remove="DTOs\LeaveRequest\**" />
-    <None Remove="DTOs\LeaveRequest\**" />
-  </ItemGroup>
-
 </Project>

@@ -8,11 +8,14 @@ public class UnitOfWork(ApplicationDbContext context) : IUnitOfWork
     private readonly Lazy<IEmployeeRepository> _employeeRepository = new(() => new EmployeeRepository(context));
 
     private readonly Lazy<IDepartmentRepository> _departmentRepository = new(() => new DepartmentRepository(context));
+    private readonly Lazy<ILeaveRequestRepository> _leaveRequestRepository = new(() => new LeaveRequestRepository(context));
     #endregion
 
     #region Properties
     public IEmployeeRepository EmployeeRepository => _employeeRepository.Value;
     public IDepartmentRepository DepartmentRepository => _departmentRepository.Value;
+    public ILeaveRequestRepository LeaveRequestRepository => _leaveRequestRepository.Value;
+
     #endregion
 
     #region Methods

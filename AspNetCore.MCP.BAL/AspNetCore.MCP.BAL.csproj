@@ -7,12 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Validators\LeaveRequest\**" />
-    <EmbeddedResource Remove="Validators\LeaveRequest\**" />
-    <None Remove="Validators\LeaveRequest\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="12.1.1" />
     <PackageReference Include="Riok.Mapperly" Version="4.3.1" />
   </ItemGroup>
